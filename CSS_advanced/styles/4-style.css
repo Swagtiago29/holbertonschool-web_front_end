@@ -8,8 +8,8 @@ html {
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: "Helvetica Nue", Helvetica, Arial, sans-serif;
-    --font-family-title: "Helvetica Nue", Helvetica, Arial, sans-serif;
+    --font-family-base: Helvetica Nue, Helvetica, Arial, sans-serif;
+    --font-family-title: Helvetica Nue, Helvetica, Arial, sans-serif;
 }
 body {
     color: var(--text-color);
