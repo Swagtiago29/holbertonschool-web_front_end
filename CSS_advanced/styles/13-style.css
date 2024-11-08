@@ -43,6 +43,9 @@ a:link{
 a:hover{
     text-decoration: underline;
 }
+a:visited{
+    text-decoration: italic;
+}
 a:active{
     background-color: var(--color-light-grey);
 }
