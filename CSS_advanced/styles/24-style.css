@@ -176,11 +176,11 @@ ul.row{
     fill: var(--text-color)
 }
 .card-services .card-title{
-    margin: none;
+    margin: 0;
 }
 .card-services a{
     display: block;
-    padding: 2.0rem;
+    padding: 2rem;
     background-color: var(--color-light-grey);
 }
 .card-services a:hover{
