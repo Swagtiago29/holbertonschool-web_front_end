@@ -51,7 +51,7 @@ html{
     --button-font-size: var(--font-size-large);
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
-    --button-hover-backround: var(--color-primary);
+    --button-hover-background: var(--color-primary);
 }
 body{
     color: var(--text-color);
@@ -80,14 +80,14 @@ a:active{
     display: var(--button-display);
     padding: var(--button-padding);
     border: var(--button-border);
-    size: var(--button-font-size);
+    font-size: var(--button-font-size);
     color: var(--button-color);
     text-decoration: var(--button-text-decoration);
 }
 .button:hover{
-    color: var(--button-hover-colorcolor);
+    color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-backround);
+    background: var(--button-hover-background);
 }
 .nav{
     margin: 0;
