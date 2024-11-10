@@ -143,7 +143,7 @@ a:active{
     background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
-    transition: all var(--transition-duration) var(--transition-cubic-bezier);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 .nav .nav-item:hover .nav-link::before{
     background-color: var(--color-primary);
@@ -307,7 +307,7 @@ ul.row{
 }
 .card-work:hover .card-inner{
     background-color: rgba(0, 0, 0, 0.7);
-    transition: all var(--transition-duration) var(--transition-cubic-bezier);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 .card-work .card-title{
     text-align: center;
