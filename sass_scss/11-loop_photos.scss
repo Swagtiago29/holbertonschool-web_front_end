@@ -3,6 +3,6 @@
 
 @each $item in $list-names {
     .photo-#{$item} {
-        background-image: url('/images/#{$item}.jpg');
+        background-image: url('/images/#{$item}.jpg') no-repeat;
     }
 }
