@@ -1,0 +1,11 @@
+/* my style */
+@mixin mixxxl-r($left-right-margin){
+    margin-right: $left-right-margin;
+    margin-left: $left-right-margin;
+}
+body {
+    @include mixxxl-r(10px)
+}
+div {
+    @include mixxxl-r(15px)
+}
