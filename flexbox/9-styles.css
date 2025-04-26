@@ -369,7 +369,7 @@
   /* Section ABOUT US */
   .section-about-us [class^="col-"] {
     /* Add your styles here */
-    padding: 20px; /* example style */
+    align-self: center;
   }
   .
   /*** 4. CARD ***/
