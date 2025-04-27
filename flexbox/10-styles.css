@@ -344,10 +344,10 @@
     position: relative;
     margin-top: -8.5rem;
   }
-  .section-hero .secction-body {
+  .section-hero .section-body {
     padding: 10rem 4rem;
   }
-  .section-hero .secction-category {
+  .section-hero .section-category {
     color: var(--color-white);
     text-transform: uppercase;
   }
