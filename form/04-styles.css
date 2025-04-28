@@ -686,6 +686,7 @@
     border: .1rem solid var(--color-black);
     box-shadow: none;
     outline: 0;
+    background-color: var(--color-white);
   }
   input[type="text"], input[type="email"] {
     padding-right: 3rem;
