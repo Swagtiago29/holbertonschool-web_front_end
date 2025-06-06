@@ -471,8 +471,18 @@ ul.row {
 }
 
 @media(max-width: 767px) {
+    .root {
+        --nav-item-margin: 0
+    }
     .navbar-menu {
         display: none;
+        flex: 1;
+    }
+    .nav {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2 ease-out;
     }
 }
 
