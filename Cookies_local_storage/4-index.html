@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 04</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+    <div id="form-container">
+        <h2>Log to the website</h2>
+        <form onsubmit="setCookiesAndShowWelcomeMessage(event)">
+            <input type="text" id="firstname">
+            <input type="email" id="email">
+            <button type="submit">Log me in!</button>
+        </form>
+    </div>
+
+    <h1>Cookies</h1>
+    <button onclick="showCookies();">Show the cookies</button>
+    <script>
+
+        function showCookies() {
+            const p = document.createElement('p')
+            const value = Cookies.get('firstname')
+            const value2 = Cookies.get('email')
+            p.innerHTML = `Email: ${value2} - Firstname: ${value}`
+            document.body.appendChild(p)
+        }
+
+        function showForm() {
+            document.getElementById('form-container').style.display = 'block'
+            const welcome = document.getElementById('welcome-message')
+            if (welcome) {
+                welcome.style.display = 'none'
+            }
+        }
+        function hideForm() {
+            document.getElementById('form-container').style.display = 'none'
+        }
+        function deleteCookiesAndShowForm() {
+            Cookies.remove('firstname')
+            Cookies.remove('email')
+            showForm()
+            }
+        function setCookiesAndShowWelcomeMessage(e) {
+            const firstname = document.getElementById('firstname').value;
+            const email = document.getElementById('email').value;
+
+            Cookies.set('firstname', firstname, {expires: 10})
+            Cookies.set('email', email, {expires: 10})
+
+            showWelcomeMessageOrForm();
+        }
+        function showWelcomeMessageOrForm() {
+            if (document.cookie) {
+                const welcomeMessage = document.createElement('h1')
+                welcomeMessage.id = 'welcome-message'
+                welcomeMessage.innerHTML = `Welcome ${Cookies.get('firstname')} <a href="#" onClick="deleteCookiesAndShowForm()">(logout)</a>`
+                document.body.prepend(welcomeMessage)
+                hideForm()
+            }
+            else
+                showForm()
+        }
+        showWelcomeMessageOrForm()
+    </script>
+</body>
+
+</html>
