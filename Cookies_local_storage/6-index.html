@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 05</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+    <h1>Cart owo</h1>
+    <script>
+        const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water']
+        try {
+            const testKey = '__test__'
+            sessionStorage.setItem(testKey, '1')
+            sessionStorage.removeItem(testKey)
+        } catch (error) {
+            console.error(error)
+            alert('Sorry, your browser does not support Web storage. Try again with a better one')
+        }
+        function addItemToCart(item) {
+            sessionStorage.setItem(item, true)
+        }
+        function createStore() {
+            const store = document.createElement('ul')
+            for (let i = 0; i < availableItems.length; i++) {
+                const item = document.createElement('li')
+                item.textContent = availableItems[i]
+                item.addEventListener('click', () => {
+                    addItemToCart(availableItems[i])
+                })
+                store.appendChild(item)
+            }
+            document.body.appendChild(store)
+        }
+        createStore()
+        function displayCart() {
+            if (sessionStorage.length == 0)
+                return
+            else {
+                const p = document.createElement('p')
+                p.textContent = `You previously had ${sessionStorage.length} items in your cart`
+                document.body.appendChild(p)
+            }
+        }
+        displayCart()
+    </script>
+</body>
+
+</html>
